@@ -3,7 +3,8 @@ mod utils;
 
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 use command::greet;
-use utils::media::initiate_media_control;
+use utils::system::get_basic_system_info;
+// use utils::system::{get_cpu_usage, get_ram_usage, get_temperature};
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -13,7 +14,21 @@ pub fn run() {
 
       // println!("{:?}", widget_manager.widgets);
 
-      initiate_media_control(app);
+      // initiate_media_control(app);
+
+      // tauri::async_runtime::block_on(async move {
+      //   loop {
+      //     get_cpu_usage();
+      //     get_ram_usage();
+      //     get_temperature();
+
+      //     std::thread::sleep(std::time::Duration::from_secs(
+      //       sysinfo::MINIMUM_CPU_UPDATE_INTERVAL.as_secs() * 100,
+      //     ));
+      //   }
+      // });
+
+      get_basic_system_info();
 
       Ok(())
     })
