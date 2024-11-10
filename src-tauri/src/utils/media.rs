@@ -2,20 +2,16 @@ use std::fmt;
 
 use base64::{engine::general_purpose, Engine as _};
 use image::{DynamicImage, ImageBuffer, RgbaImage};
-use serde::{Deserialize, Serialize};
 use std::io::Cursor;
-use tauri::{async_runtime, App, Emitter, Manager};
+use tauri::{async_runtime, App, Emitter};
 use windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackStatus as WinPlaybackStatus;
 use windows::{
-  core::Array,
-  Foundation::TimeSpan,
   Graphics::Imaging::BitmapDecoder,
   Media::Control::{
     GlobalSystemMediaTransportControlsSession, GlobalSystemMediaTransportControlsSessionManager,
     GlobalSystemMediaTransportControlsSessionMediaProperties,
     GlobalSystemMediaTransportControlsSessionTimelineProperties,
   },
-  Storage::Streams::{Buffer, IBuffer},
 };
 
 #[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]

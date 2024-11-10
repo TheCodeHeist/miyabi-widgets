@@ -32,5 +32,6 @@ windows = { version = "0.56.0", features = [
 image = "0.25.5"
 base64 = "0.22.1"
 toml = "0.8.19"
-sysinfo = "0.32.0"
+sysinfo = { version = "0.32.0", features = ["serde"] }
 machine-info = "1.0.9"
+systemstat = "0.2.3"
