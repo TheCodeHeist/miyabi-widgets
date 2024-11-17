@@ -68,7 +68,7 @@ impl WidgetHandler {
           let mut window = WebviewWindowBuilder::new(
             app_handle,
             widget.id.clone(),
-            tauri::WebviewUrl::App(format!("/media/{}", &widget.id).into()),
+            tauri::WebviewUrl::App(format!("/media?id={}", &widget.id).into()),
           )
           .decorations(false)
           .transparent(true)
