@@ -15,10 +15,13 @@ export enum MediaControlStatus {
 
 export interface IMediaControlEventPayload {
   artist: string;
-  duration: number;
+  start_time: number;
+  end_time: number;
   media_status: MediaControlStatus;
   position: number;
   status_code: number;
   thumbnail: string;
   title: string;
+  app_id: string;
+  main_color: Array<number>;
 }

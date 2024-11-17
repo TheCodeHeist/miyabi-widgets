@@ -2126,7 +2126,6 @@ dependencies = [
  "tauri",
  "tauri-build",
  "tauri-plugin-shell",
- "toml 0.8.19",
  "windows 0.56.0",
 ]
 

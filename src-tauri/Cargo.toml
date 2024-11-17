@@ -25,13 +25,13 @@ serde_json = "1"
 windows = { version = "0.56.0", features = [
   "Media",
   "Media_Control",
+  "Media_Playback",
   "Foundation",
   "Storage_Streams",
   "Graphics_Imaging",
 ] }
 image = "0.25.5"
 base64 = "0.22.1"
-toml = "0.8.19"
 sysinfo = { version = "0.32.0", features = ["serde"] }
 machine-info = "1.0.9"
 systemstat = "0.2.3"
